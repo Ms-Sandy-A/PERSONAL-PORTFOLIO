@@ -24,27 +24,16 @@
   <body class="bg-[#191f36] text-white font-sans">
     <!-- HEADER -->
     <header
-      class="fixed top-0 left-0 w-full bg-[#191f36] flex justify-between items-center px-10 py-5 z-50 relative"
+      class="fixed top-0 left-0 w-full bg-[#191f36] flex justify-between items-center px-10 py-5 z-50 shadow-md"
     >
-      <a href="#" class="text-2xl font-bold">Ms Sandy A</a>
-      <nav class="md:flex space-x-6 font-bold">
+      <a href="#" class="text-2xl font-bold">Ms A</a>
+      <nav class="hidden md:flex space-x-6 font-bold">
         <a href="#home" class="hover:text-[#59B2F4]">Home</a>
         <a href="#about" class="hover:text-[#59B2F4]">About</a>
         <a href="#services" class="hover:text-[#59B2F4]">Services</a>
         <a href="#portfolio" class="hover:text-[#59B2F4]">Portfolio</a>
         <a href="#contact" class="hover:text-[#59B2F4]">Contact</a>
       </nav>
-      <!-- <img class="md:hidden w-89" src="./icons8-menu-50.png" alt="" id="show" /> -->
-      <!-- <div
-        class="res-nav flex fixed flex-col items-start top-0 w-[350px] h-[100%] gap-8 bg-black z-5 right-0 p-10"
-      >
-        <img src="./icons8-close-30.png" alt="" />
-        <a href="#home" class="hover:text-[#59B2F4] ml-5 mt-10">Home</a>
-        <a href="#about" class="hover:text-[#59B2F4] ml-5">About</a>
-        <a href="#services" class="hover:text-[#59B2F4] ml-5">Services</a>
-        <a href="#portfolio" class="hover:text-[#59B2F4] ml-5">Portfolio</a>
-        <a href="#contact" class="hover:text-[#59B2F4] ml-5">Contact</a>
-      </div> -->
     </header>
 
     <!-- HOME SECTION -->
@@ -115,7 +104,7 @@
     <!-- ABOUT SECTION -->
     <section id="about" class="py-20 px-6 bg-[#0a192f] text-white">
       <div
-        class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between w-[70%] mx-auto gap-6"
+        class="max-w-6xl flex flex-col md:flex-row items-center justify-between w-[70%] mx-auto gap-6"
       >
         <!-- IMAGE -->
         <img
@@ -169,8 +158,8 @@
         <div
           class="bg-[#191f36] p-6 rounded-lg shadow-lg transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl hover:bg-[#1f2745] hover:ring-2 hover:ring-[#59B2F4]"
         >
-          <i class="fas fa-code text-4xl text-[#59B2F4] mb-4"></i>
-          <h3 class="text-2xl font-semibold mb-2">UI|UX Design</h3>
+          <i class="fa-solid fa-laptop-code text-4xl text-[#59B2F4] mb-4"></i>
+          <h3 class="text-2xl font-semibold mb-2">Web Develoment</h3>
           <p>
             I design and build user-friendly, responsive websites that combine
             performance, accessibility, and visual appeal across all devices
@@ -210,8 +199,62 @@
       </div>
     </section>
 
-    <!-- PROJECT GALLERY SECTION -->
-    <section id="portfolio" class="py-20 px-10 bg-[#0a192f] text-white">
+    <section class="flex flex-col items-center my-10 text-[#1B5BA2]">
+      <h2 class="text-4xl font-bold text-center mb-6">
+        My <span class="text-[#59B2F4]">Skills</span>
+      </h2>
+
+      <!-- ICONS CONTAINER -->
+      <div class="flex flex-row flex-wrap justify-center gap-10">
+        <!-- ----Skill Card 1-- -->
+        <div class="flex flex-col bg-white p-5 rounded-[10%] text-center">
+          <i
+            class="fa-brands fa-html5 text-6xl transition-all duration-300 transform hover:scale-125 hover:shadow-[0-0-20px-#59B2F4]"
+          ></i>
+          <h1
+            class="text-xl font-extrabold text-[#032B44] transition-all duration-300 transform hover:scale-110 hover:shadow-[0-0-20px-#59B2F4]"
+          >
+            HTML
+          </h1>
+          <h1
+            class="text-sm font-extrabold text-white rounded-[15%] border p-1 bg-[#032B44] transition-all duration-300 transform hover:scale-105 hover:shadow-[0-0-20px-#59B2F4]"
+          ></h1>
+        </div>
+
+        <!-- -----Skill Card 2------ -->
+        <div class="flex flex-col bg-white p-5 rounded-[10%] text-center">
+          <i
+            class="fa-brands fa-css3 text-6xl transition-all duration-300 transform hover:scale-125 hover:shadow-[0-0-20px-#59B2F4]"
+          ></i>
+          <h1
+            class="text-xl font-extrabold text-[#032B44] transition-all duration-300 transform hover:scale-110 hover:shadow-[0-0-20px-#59B2F4]"
+          >
+            CSS
+          </h1>
+          <h1
+            class="text-sm font-extrabold text-white rounded-[15%] border p-1 bg-[#032B44] transition-all duration-300 transform hover:scale-105 hover:shadow-[0-0-20px-#59B2F4]"
+          ></h1>
+        </div>
+
+        <!-- ---Skill Card 3--- -->
+        <div class="flex flex-col bg-white p-5 rounded-[10%] text-center">
+          <i
+            class="fa-brands fa-js text-6xl transition-all duration-300 transform hover:scale-125 hover:shadow-[0-0-20px-#59B2F4]"
+          ></i>
+          <h1
+            class="text-xl font-extrabold text-[#032B44] transition-all duration-300 transform hover:scale-110 hover:shadow-[0-0-20px-#59B2F4]"
+          >
+            JavaScript
+          </h1>
+          <h1
+            class="text-sm font-extrabold text-white rounded-[15%] border p-1 bg-[#032B44] transition-all duration-300 transform hover:scale-105 hover:shadow-[0-0-20px-#59B2F4]"
+          ></h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---PROJECT GALLERY SECTION--- -->
+    <section id="portfolio" class="bg-[#0a192f] w-full py-20 px-10">
       <h2 class="text-4xl font-bold text-center mb-6">
         Project <span class="text-[#59B2F4]">Gallery</span>
       </h2>
@@ -313,9 +356,9 @@
     </section>
 
     <!-- CONTACT SECTION -->
-    <section id="contact" class="py-20 px-6 bg-[#0a192f] text-white">
+    <!-- <section id="contact" class="py-20 px-6 bg-[#0a192f] text-white">
       <h2 class="text-4xl font-bold text-center mb-10">
-        Contact <span class="text-[#59B2F4]">Me</span>
+        Get In<span class="text-[#59B2F4]">Touch</span>
       </h2>
 
       <form
@@ -326,9 +369,9 @@
           type="text"
           placeholder="Full Name"
           class="w-full px-4 py-3 rounded bg-[#191f36] text-white focus:outline-none"
-        />
+        /> -->
 
-        <input
+    <!-- <input
           type="email"
           placeholder="Email Address"
           class="w-full px-4 py-3 rounded bg-[#191f36] text-white focus:outline-none"
@@ -338,31 +381,118 @@
           type="text"
           placeholder="Mobile Number"
           class="w-full px-4 py-3 rounded bg-[#191f36] text-white focus:outline-none"
-        />
+        /> -->
 
-        <input
+    <!-- <input
           type="text"
           placeholder="Email Subject"
           class="w-full px-4 py-3 rounded bg-[#191f36] text-white focus:outline-none"
-        />
+        /> -->
 
-        <!-- Full width for message area -->
-        <textarea
+    <!-- Full width for message area -->
+    <!-- <textarea
           placeholder="Your Message"
           rows="6"
           class="md:col-span-2 w-full px-4 py-3 rounded bg-[#191f36] text-white focus:outline-none"
-        ></textarea>
+        ></textarea> -->
 
-        <!-- Button centered below -->
-        <div class="md:col-span-2 text-center">
+    <!-- Button centered below -->
+    <!-- <div class="md:col-span-2 text-center">
           <button
             type="submit"
-            class="bg-[#59B2F4] text-black px-8 py-3 rounded-full font-semibold shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-[0-0-20px-#59B2F4] focus:outline-none"
-          >
+            class="bg-[#59B2F4] text-black px-8 py-3 rounded-full font-semibold shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_40px-#59B2F4]  focus:outline-none">
             Send Message
           </button>
         </div>
       </form>
+    </section> -->
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 px-6 bg-[#0a192f]">
+      <h2 class="text-4xl font-bold text-center mb-10">
+        <span class="text-white">Get In</span>
+        <span class="text-[#59B2F4]">Touch</span>
+      </h2>
+      <div
+        class="gap-10 flex flex-col items-center md:items-start w-[80%] mx-auto justify-center md:flex-row"
+      >
+        <div class="lets-talk w-[50%]">
+          <h1 class="font-bold text-4xl mb-4 text-[#1f2745]">
+            <span class="text-white">Connect Me</span>
+            <span class="text-[#59B2F4]">With</span>
+          </h1>
+          <p class="mb-3 text-[17px]">
+            Available for new projects and open to collaboration. Feel free to
+            get in touch with your ideas. Happy to discuss how I can contribute.
+            You can reach out anytime.
+          </p>
+          <!-- Connect with me-->
+          <div>
+            <div class="flex gap-5 items-center mb-4 text-17px">
+              <i class="fa-solid fa-envelope text-[#fff] text-4xl"></i>
+              <h1>sandraallotey70@gmail.com</h1>
+            </div>
+
+            <div class="flex gap-5 items-center mb-4 text-17px">
+              <i class="fa-solid fa-tty text-[#fff] text-3xl"></i>
+              <h1>0545725331</h1>
+            </div>
+
+            <div class="flex gap-5 items-center mb-4 text-17px">
+              <i class="fa-brands fa-linkedin text-[#fff] text-3xl"></i>
+              <h1>Sandra Allotey</h1>
+            </div>
+
+            <div class="flex gap-5 items-center text-17px">
+              <i class="fa-solid fa-location-dot text-[#fff] text-3xl"></i>
+              <h1>Accra,Ghana</h1>
+            </div>
+          </div>
+        </div>
+        <form
+          action="#"
+          class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6"
+        >
+          <input
+            type="text"
+            placeholder="Full Name"
+            class="w-full px-4 py-3 rounded bg-[#191f36] text-white focus:outline-none"
+          />
+
+          <input
+            type="email"
+            placeholder="Email Address"
+            class="w-full px-4 py-3 rounded bg-[#191f36] text-white focus:outline-none"
+          />
+
+          <input
+            type="text"
+            placeholder="Mobile Number"
+            class="w-full px-4 py-3 rounded bg-[#191f36] text-white focus:outline-none"
+          />
+
+          <input
+            type="text"
+            placeholder="Email Subject"
+            class="w-full px-4 py-3 rounded bg-[#191f36] text-white focus:outline-none"
+          />
+
+          <!-- textarea -->
+          <textarea
+            placeholder="Your Message"
+            rows="6"
+            class="md:col-span-2 w-full px-4 py-3 rounded bg-[#191f36] text-white focus:outline-none"
+          ></textarea>
+
+          <!-- lastButton -->
+          <div class="md:col-span-2 text-center">
+            <a
+              class="bg-[#59B2F4] text-black px-8 py-3 rounded-full font-semibold shadow-md transition-all duration-300 transition hover:scale-105 hover:shadow-[0_0_20px-#59B2F4] focus:outline-none  cursor-pointer hover:bg-[#59B2F4]"
+            >
+              Send Message
+            </a>
+          </div>
+        </form>
+      </div>
     </section>
     <!-- FOOTER -->
     <footer class="bg-[#262b40] text-center py-6 mt-10">
@@ -380,7 +510,7 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
       new Typed("#typed", {
-        strings: ["Frontend Developer.", " Web Designer."],
+        strings: ["Frontend Developer.", " UI|UX Designer.", "Web Designer"],
         typeSpeed: 60,
         backSpeed: 30,
         loop: true,
