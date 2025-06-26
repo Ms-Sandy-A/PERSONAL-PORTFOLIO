@@ -3,14 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Tailwind Portfolio</title>
-
+    <title>Responsive Tailwind Portfolio with Language Dropdown</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
@@ -20,21 +18,46 @@
       }
     </style>
   </head>
-
   <body class="bg-[#191f36] text-white font-sans">
     <!-- HEADER -->
-    <header
-      class="fixed top-0 left-0 w-full bg-[#191f36] flex justify-between items-center px-10 py-5 z-50 shadow-md"
-    >
-      <a href="#" class="text-2xl font-bold">Ms A</a>
-      <nav class="hidden md:flex space-x-6 font-bold">
+    <header class="fixed top-0 left-0 w-full bg-[#191f36] flex justify-between items-center px-10 py-5 z-50 shadow-md">
+      <a href="#" class="text-2xl font-bold">Ms Sandy A</a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-6 font-bold items-center relative">
         <a href="#home" class="hover:text-[#59B2F4]">Home</a>
         <a href="#about" class="hover:text-[#59B2F4]">About</a>
         <a href="#services" class="hover:text-[#59B2F4]">Services</a>
         <a href="#portfolio" class="hover:text-[#59B2F4]">Portfolio</a>
+        <a href="#testimonials" class="hover:text-[#59B2F4]">Testimonials</a>
         <a href="#contact" class="hover:text-[#59B2F4]">Contact</a>
       </nav>
+
+      <!-- Hamburger Icon -->
+      <button id="open" class="block md:hidden">
+        <img src="./image/blue.png" alt="menu" class="w-8 h-8" />
+      </button>
     </header>
+
+    <!-- Mobile Nav -->
+    <div
+      id="res-nav"
+      class="fixed top-0 right-0 w-[200px] bg-[#191f36] h-full flex flex-col p-10 pt-0 pr-0 gap-7 transition-transform duration-300 translate-x-full md:hidden z-50"
+    >
+      <div class="flex justify-end">
+        <img src="./image/close.png" alt="close" id="close" class="w-10 mt-2 mr-2 cursor-pointer" />
+      </div>
+      <a href="#home" class="hover:text-[#59B2F4]">Home</a>
+      <a href="#about" class="hover:text-[#59B2F4]">About</a>
+      <a href="#services" class="hover:text-[#59B2F4]">Services</a>
+      <a href="#portfolio" class="hover:text-[#59B2F4]">Portfolio</a>
+      <a href="#testimonials" class="hover:text-[#59B2F4]">Testimonials</a>
+      <a href="#contact" class="hover:text-[#59B2F4]">Contact</a>
+
+    </div>
+
+      
+    
 
     <!-- HOME SECTION -->
     <section
@@ -51,7 +74,7 @@
           Creative and passionate web developer with a knack <br />
           for building responsive and engaging web interfaces.
         </p>
-        <!-- -------SOCIAL MEDIA ICONS-------- -->
+        <!-- SOCIAL MEDIA ICONS -->
         <div class="flex mt-6 space-x-4">
           <a
             href="https://twitter.com"
@@ -84,9 +107,9 @@
             ><i class="fab fa-linkedin"></i>
           </a>
         </div>
-        <!-- -------DOWNLOAD BUTTON------- -->
+        <!-- DOWNLOAD BUTTON -->
         <a
-          href="./cv.pdf"
+          href="./assests/Sandra Allotry_CV.pdf"
           download
           class="inline-block mt-6 bg-[#59B2F4] text-[#191f36] font-semibold px-6 py-2 rounded-full shadow-lg transition duration-300 hover:shadow-[0_0_20px_#59B2F4] hover:scale-105"
           >Download CV
@@ -123,7 +146,6 @@
               >Frontend Developer | A Responsive Web Designer.</span
             >
           </h3>
-
           <div class="text-lg max-w-xl mb-6 leading-relaxed">
             <p class="mb-8">
               I'm a passionate Frontend Developer and responsive web designer
@@ -131,10 +153,10 @@
               dedicated to crafting visually appealing, user-friendly websites
               that <br />adapt beautifully to any screen. With a strong
               foundation in HTML,<br />
-              CSS, JavaScript, and Tailwind CSS, I turn ideas into clean,
-              functional <br />interfaces that deliver real results. I thrive on
-              creating seamless digital <br />experiences that not only look
-              great but also perform flawlessly.
+              CSS, JavaScript, React, and Tailwind CSS, I turn ideas into clean,
+              functional interfaces that deliver real results. I thrive on
+              creating seamless digital experiences that not only look great but
+              also perform flawlessly.
             </p>
           </div>
           <!-- BUTTON -->
@@ -159,14 +181,13 @@
           class="bg-[#191f36] p-6 rounded-lg shadow-lg transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl hover:bg-[#1f2745] hover:ring-2 hover:ring-[#59B2F4]"
         >
           <i class="fa-solid fa-laptop-code text-4xl text-[#59B2F4] mb-4"></i>
-          <h3 class="text-2xl font-semibold mb-2">Web Develoment</h3>
+          <h3 class="text-2xl font-semibold mb-2">Web Development</h3>
           <p>
             I design and build user-friendly, responsive websites that combine
             performance, accessibility, and visual appeal across all devices
             using modern web technologies.
           </p>
         </div>
-
         <!-- Card 2 -->
         <div
           class="bg-[#191f36] p-6 rounded-lg shadow-lg transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl hover:bg-[#1f2745] hover:ring-2 hover:ring-[#59B2F4]"
@@ -180,7 +201,6 @@
             principles for better usability and engagement.
           </p>
         </div>
-
         <!-- Card 3 -->
         <div
           class="bg-[#191f36] p-6 rounded-lg shadow-lg transition duration-300 transform hover:-translate-y-2 hover:shadow-2xl hover:bg-[#1f2745] hover:ring-2 hover:ring-[#59B2F4]"
@@ -199,213 +219,334 @@
       </div>
     </section>
 
-    <section class="flex flex-col items-center my-10 text-[#1B5BA2]">
-      <h2 class="text-4xl font-bold text-center mb-6">
-        My <span class="text-[#59B2F4]">Skills</span>
-      </h2>
-
-      <!-- ICONS CONTAINER -->
-      <div class="flex flex-row flex-wrap justify-center gap-10">
-        <!-- ----Skill Card 1-- -->
-        <div class="flex flex-col bg-white p-5 rounded-[10%] text-center">
-          <i
-            class="fa-brands fa-html5 text-6xl transition-all duration-300 transform hover:scale-125 hover:shadow-[0-0-20px-#59B2F4]"
-          ></i>
-          <h1
-            class="text-xl font-extrabold text-[#032B44] transition-all duration-300 transform hover:scale-110 hover:shadow-[0-0-20px-#59B2F4]"
-          >
-            HTML
-          </h1>
-          <h1
-            class="text-sm font-extrabold text-white rounded-[15%] border p-1 bg-[#032B44] transition-all duration-300 transform hover:scale-105 hover:shadow-[0-0-20px-#59B2F4]"
-          ></h1>
-        </div>
-
-        <!-- -----Skill Card 2------ -->
-        <div class="flex flex-col bg-white p-5 rounded-[10%] text-center">
-          <i
-            class="fa-brands fa-css3 text-6xl transition-all duration-300 transform hover:scale-125 hover:shadow-[0-0-20px-#59B2F4]"
-          ></i>
-          <h1
-            class="text-xl font-extrabold text-[#032B44] transition-all duration-300 transform hover:scale-110 hover:shadow-[0-0-20px-#59B2F4]"
-          >
-            CSS
-          </h1>
-          <h1
-            class="text-sm font-extrabold text-white rounded-[15%] border p-1 bg-[#032B44] transition-all duration-300 transform hover:scale-105 hover:shadow-[0-0-20px-#59B2F4]"
-          ></h1>
-        </div>
-
-        <!-- ---Skill Card 3--- -->
-        <div class="flex flex-col bg-white p-5 rounded-[10%] text-center">
-          <i
-            class="fa-brands fa-js text-6xl transition-all duration-300 transform hover:scale-125 hover:shadow-[0-0-20px-#59B2F4]"
-          ></i>
-          <h1
-            class="text-xl font-extrabold text-[#032B44] transition-all duration-300 transform hover:scale-110 hover:shadow-[0-0-20px-#59B2F4]"
-          >
-            JavaScript
-          </h1>
-          <h1
-            class="text-sm font-extrabold text-white rounded-[15%] border p-1 bg-[#032B44] transition-all duration-300 transform hover:scale-105 hover:shadow-[0-0-20px-#59B2F4]"
-          ></h1>
-        </div>
+<!-- SKILLS SECTION -->
+<section class="my-10 bg-[#191f36] py-10 flex flex-col items-center justify-center">
+  <h2 class="text-5xl font-bold text-center mb-12 text-[#ff]">
+    My <span class="text-[#59B2F4]">Skills</span>
+  </h2>
+  <div class="w-full flex justify-center items-center">
+    <div class="overflow-hidden whitespace-nowrap w-full max-w-3xl">
+      <div class="inline-block animate-marquee">
+        <!-- HTML -->
+        <span class="inline-block mx-8 align-middle">
+          <div class="flex flex-col items-center">
+            <i class="fa-brands fa-html5 text-6xl text-[#e34c26]"></i>
+            <span class="text-xl font-extrabold text-[#fff] mt-2">HTML</span>
+          </div>
+        </span>
+        <!-- CSS -->
+        <span class="inline-block mx-8 align-middle">
+          <div class="flex flex-col items-center">
+            <i class="fa-brands fa-css3-alt text-6xl text-[#264de4]"></i>
+            <span class="text-xl font-extrabold text-[#fff] mt-2">CSS</span>
+          </div>
+        </span>
+        <!-- JavaScript -->
+        <span class="inline-block mx-8 align-middle">
+          <div class="flex flex-col items-center">
+            <i class="fa-brands fa-js text-6xl text-[#f0db4f]"></i>
+            <span class="text-xl font-extrabold text-[#fff] mt-2">JavaScript</span>
+          </div>
+        </span>
+        <!-- React -->
+        <span class="inline-block mx-8 align-middle">
+          <div class="flex flex-col items-center">
+            <i class="fa-brands fa-react text-6xl text-[#61DBFB]"></i>
+            <span class="text-xl font-extrabold text-[#fff] mt-2">React</span>
+          </div>
+        </span>
+        <!-- Tailwind CSS -->
+        <span class="inline-block mx-8 align-middle">
+          <div class="flex flex-col items-center">
+            <svg viewBox="0 0 48 48" fill="none" class="w-12 h-12 mb-1">
+              <path fill="#38BDF8" d="M24 12c-5.333 0-8.667 2.667-10 8 2-2.667 4.333-3.667 7-3 1.522.381 2.606 1.465 3.797 2.656C26.989 21.848 28.072 22.932 29.594 23.313c2.667.667 5-0.333 7-3-1.333-5.333-4.667-8-10-8zm-10 12c-5.333 0-8.667 2.667-10 8 2-2.667 4.333-3.667 7-3 1.522.381 2.606 1.465 3.797 2.656C14.989 33.848 16.072 34.932 17.594 35.313c2.667.667 5-0.333 7-3-1.333-5.333-4.667-8-10-8z"/>
+            </svg>
+            <span class="text-xl font-extrabold text-[#fff] mt-2">Tailwind CSS</span>
+          </div>
+        </span>
       </div>
-    </section>
+    </div>
+  </div>
+  <style>
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+    .animate-marquee {
+      animation: marquee 18s linear infinite;
+    }
+  </style>
+</section>
+<!-- -------EXPERIENCE SECTION-------- -->
+ <section id="experiences" class="py-20 px-10 bg-[#262b40] text-white">
+  <h2 class="text-3xl font-bold text-center text-blue-700 mb-12">Experience</h2>
 
-    <!-- ---PROJECT GALLERY SECTION--- -->
-    <section id="portfolio" class="bg-[#0a192f] w-full py-20 px-10">
-      <h2 class="text-4xl font-bold text-center mb-6">
-        Project <span class="text-[#59B2F4]">Gallery</span>
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div
-          class="bg-[#262b40] p-4 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105 hover:border-2 hover:border-[#59B2F4] hover:shadow-[0_0_20px_#59B2F4]"
-        >
-          <img
-            src="./bg-masthead.jpg"
-            alt="Project 1"
-            class="rounded mb-4 w-full h-auto object-cover"
-          />
-          <h3 class="text-xl font-semibold">Project One</h3>
-          <p>
-            A responsive website built with HTML for structure, CSS for styling,
-            JavaScript for interactive features, and Tailwind CSS for
-            utility-based styling and layout adjustments.
-          </p>
-        </div>
-        <div
-          class="bg-[#262b40] p-4 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105 hover:border-2 hover:border-[#59B2F4] hover:shadow-[0_0_20px_#59B2F4]"
-        >
-          <img
-            src="./gallery_img-01.jpg"
-            alt="Project 2"
-            class="rounded mb-4 w-full h-auto object-cover"
-          />
-          <h3 class="text-xl font-semibold">Project Two</h3>
-          <p>
-            I built this responsive gallery website using HTML for structure,
-            CSS for styling, JavaScript for interactive features, and Tailwind
-            CSS for utility-based styling and layout adjustments.
-          </p>
-        </div>
-        <div
-          class="bg-[#262b40] p-4 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105 hover:border-2 hover:border-[#59B2F4] hover:shadow-[0_0_20px_#59B2F4]"
-        >
-          <img
-            src="./room2.jpg"
-            alt="Project 3"
-            class="rounded mb-4 w-full h-auto object-cover"
-          />
-          <h3 class="text-xl font-semibold">Project Three</h3>
-          <p>
-            This hotel website was created using HTML to define the layout, CSS
-            to style the components, JavaScript to add dynamic behavior like
-            image sliders, and Tailwind CSS for responsive design and modern UI
-            elements.
-          </p>
-        </div>
-        <div
-          class="bg-[#262b40] p-4 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105 hover:border-2 hover:border-[#59B2F4] hover:shadow-[0_0_20px_#59B2F4]"
-        >
-          <img
-            src="./work-6.jpg"
-            alt="Project 4"
-            class="rounded mb-4 w-full h-auto object-cover"
-          />
-          <h3 class="text-xl font-semibold">Project Four</h3>
-          <p>
-            For this cosmetic website, I used HTML to organize content, CSS for
-            detailed styling, JavaScript for features such as product previews,
-            and Tailwind CSS to ensure responsiveness across devices.
-          </p>
-        </div>
-        <div
-          class="bg-[#262b40] p-4 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105 hover:border-2 hover:border-[#59B2F4] hover:shadow-[0_0_20px_#59B2F4]"
-        >
-          <img
-            src="./about.jpg"
-            alt="Project 5"
-            class="rounded mb-4 w-full h-auto object-cover"
-          />
-          <h3 class="text-xl font-semibold">Project Five</h3>
-          <p>
-            This car website was developed using HTML for structure, CSS for
-            styling the layout and components, JavaScript to implement
-            interactivity like car model sliders, and Tailwind CSS to create a
-            responsive and clean design.
-          </p>
-        </div>
-        <div
-          class="bg-[#262b40] p-4 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105 hover:border-2 hover:border-[#59B2F4] hover:shadow-[0_0_20px_#59B2F4]"
-        >
-          <img
-            src="./cat-item3.jpg"
-            alt="Project 6"
-            class="rounded mb-4 w-full h-auto object-cover"
-          />
-          <h3 class="text-xl font-semibold">Project Six</h3>
-          <p>
-            I created this fashion website using HTML to structure the pages,
-            CSS to design the appearance, JavaScript to add user interactions
-            such as animations or navigation toggles, and Tailwind CSS for
-            responsive layout and styling.
-          </p>
-        </div>
+  <div class="max-w-4xl mx-auto space-y-8">
+
+  </div>
+    <div class="bg-[#0a192f] shadow-md rounded-lg p-6 hover:shadow-lg transition duration-300">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="text-xl font-semibold text-white-800">National Service Personnel</h3>
+        <span class="text-sm text-gray-500 italic">2023 - 2024</span>
       </div>
-    </section>
+      <p class="text-white-700 font-medium">Customer Service & Marketing Department<br>Ghana Civil Aviation Authority (GCAA), Kotoka International Airport</p>
+      <ul class="list-disc list-inside text-gray-400 mt-4 space-y-2">
+        <li>Assisted with customer inquiries and service-related issues.</li>
+        <li>Helped coordinate and promote marketing campaigns and public awareness activities.</li>
+        <li>Maintained records and supported daily administrative tasks.</li>
+      </ul>
+    </div>
+  </div>
+    <div class="bg-[#0a192f] shadow-md rounded-lg p-6 hover:shadow-lg transition duration-300">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="text-xl font-semibold text-white-800">Internship</h3>
+        <span class="text-sm text-gray-500 italic">2021</span>
+      </div>
+      <p class="text-white-700 font-medium">Customer Service Unit <br>Multi T.V</p>
+      <ul class="list-disc list-inside text-gray-400 mt-4 space-y-2">
+        <li>Assisted clients by addressing inquiries and resolving concerns.</li>
+        <li>Entered data into systems and provided support to the customer service team..</li>
+        <li>Gathered feedback to aid in learning and development initiatives.</li>
+      </ul>
+    </div>
 
-    <!-- CONTACT SECTION -->
-    <!-- <section id="contact" class="py-20 px-6 bg-[#0a192f] text-white">
-      <h2 class="text-4xl font-bold text-center mb-10">
-        Get In<span class="text-[#59B2F4]">Touch</span>
-      </h2>
+  </div>
+</section>
 
-      <form
-        action="#"
-        class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6"
-      >
-        <input
-          type="text"
-          placeholder="Full Name"
-          class="w-full px-4 py-3 rounded bg-[#191f36] text-white focus:outline-none"
-        /> -->
-
-    <!-- <input
-          type="email"
-          placeholder="Email Address"
-          class="w-full px-4 py-3 rounded bg-[#191f36] text-white focus:outline-none"
-        />
-
-        <input
-          type="text"
-          placeholder="Mobile Number"
-          class="w-full px-4 py-3 rounded bg-[#191f36] text-white focus:outline-none"
-        /> -->
-
-    <!-- <input
-          type="text"
-          placeholder="Email Subject"
-          class="w-full px-4 py-3 rounded bg-[#191f36] text-white focus:outline-none"
-        /> -->
-
-    <!-- Full width for message area -->
-    <!-- <textarea
-          placeholder="Your Message"
-          rows="6"
-          class="md:col-span-2 w-full px-4 py-3 rounded bg-[#191f36] text-white focus:outline-none"
-        ></textarea> -->
-
-    <!-- Button centered below -->
-    <!-- <div class="md:col-span-2 text-center">
-          <button
-            type="submit"
-            class="bg-[#59B2F4] text-black px-8 py-3 rounded-full font-semibold shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_40px-#59B2F4]  focus:outline-none">
-            Send Message
-          </button>
+   <!-- PROJECT GALLERY SECTION -->
+<section id="portfolio" class="bg-[#0a192f] w-full py-20 px-10">
+  <h2 class="text-4xl font-bold text-center mb-6">
+    Project <span class="text-[#59B2F4]">Gallery</span>
+  </h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Project 1 -->
+    <div class="bg-[#262b40] p-4 rounded-lg shadow-lg group relative transition-transform duration-300 transform hover:scale-105 hover:border-2 hover:border-[#59B2F4] hover:shadow-[0_0_20px_#59B2F4]">
+      <a href="https://ms-s-a-fashion.vercel.app/" target="_blank" class="block relative">
+        <div class="relative mb-4 overflow-hidden rounded">
+          <img src="./image/aning.jpg" alt="Project 1" class="w-full h-[490px] object-cover" />
+          <!-- Overlay on hover, scrolls up from below -->
+          <div class="absolute left-0 bottom-0 w-full bg-[#59B2]/80 py-4 px-2 opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 rounded-b">
+            <p class="text-white text-center text-base">
+             A stylish and fully responsive fashion website built with HTML and Tailwind CSS. Highlights the latest trends, collections, and a clean layout perfect for showcasing fashion brands.
+            </p>
+          </div>
         </div>
-      </form>
-    </section> -->
+        <h3 class="text-xl font-semibold hover:text-[#59B2F4] mt-2">A Fashion Website</h3>
+      </a>
+      <a
+        href="https://ms-s-a-fashion.vercel.app/"
+        target="_blank"
+        class="inline-block mt-2 px-4 py-2 bg-[#59B2F4] text-[#191f36] rounded hover:bg-[#1f2745] hover:text-white transition"
+      >View</a>
+    </div>
+    <!-- Project 2 -->
+    <div class="bg-[#262b40] p-4 rounded-lg shadow-lg group relative transition-transform duration-300 transform hover:scale-105 hover:border-2 hover:border-[#59B2F4] hover:shadow-[0_0_20px_#59B2F4]">
+      <a href="https://libapp2.netlify.app/" target="_blank" class="block relative">
+        <div class="relative mb-4 overflow-hidden rounded">
+          <img src="./image/library.jpg" alt="Project 2" class="w-full h-[490px] object-cover" />
+          <div class="absolute left-0 bottom-0 w-full bg-[#59B2F4]/80 py-4 px-2 opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 rounded-b">
+            <p class="text-white text-center text-base">
+           A full-stack digital library platform built with React and Tailwind CSS. It includes a multilingual interface powered by react-i18next, allowing users to browse, borrow, and manage books with ease across different languages.
+            </p>
+          </div>
+        </div>
+        <h3 class="text-xl font-semibold hover:text-[#59B2F4] mt-2">A Library App</h3>
+      </a>
+      <a
+        href="https://libapp2.netlify.app/"
+        target="_blank"
+        class="inline-block mt-2 px-4 py-2 bg-[#59B2F4] text-[#191f36] rounded hover:bg-[#1f2745] hover:text-white transition"
+      >View</a>
+    </div>
+    <!-- Project 3 -->
+    <div class="bg-[#262b40] p-4 rounded-lg shadow-lg group relative transition-transform duration-300 transform hover:scale-105 hover:border-2 hover:border-[#59B2F4] hover:shadow-[0_0_20px_#59B2F4]">
+      <a href="https://eventhived.netlify.app/" target="_blank" class="block relative">
+        <div class="relative mb-4 overflow-hidden rounded">
+          <img src="./image/event.jpg" alt="Project 3" class="w-full h-[490px] object-cover" />
+          <div class="absolute left-0 bottom-0 w-full bg-[#59B2F4]/80 py-4 px-2 opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 rounded-b">
+            <p class="text-white text-center text-base">
+              An elegant and responsive event management website created with React and Tailwind CSS.This website allows users to explore, organize, and stay updated on exciting events with ease.
+            </p>
+          </div>
+        </div>
+        <h3 class="text-xl font-semibold hover:text-[#59B2F4] mt-2">Event Hive</h3>
+      </a>
+      <a
+        href="https://eventhived.netlify.app/"
+        target="_blank"
+        class="inline-block mt-2 px-4 py-2 bg-[#59B2F4] text-[#191f36] rounded hover:bg-[#1f2745] hover:text-white transition"
+      >View</a>
+    </div>
+    <!-- Project 4 -->
+    <div class="bg-[#262b40] p-4 rounded-lg shadow-lg group relative transition-transform duration-300 transform hover:scale-105 hover:border-2 hover:border-[#59B2F4] hover:shadow-[0_0_20px_#59B2F4]">
+      <a href="https://github.com/yourusername/project4" target="_blank" class="block relative">
+        <div class="relative mb-4 overflow-hidden rounded">
+          <img src="./image/food.jpg" alt="Project 4" class="w-full h-[490px] object-cover" />
+          <div class="absolute left-0 bottom-0 w-full bg-[#59B2F4]/80 py-4 px-2 opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 rounded-b">
+            <p class="text-white text-center text-base">
+            A modern food-themed website designed with HTML and Tailwind CSS. Showcases delicious meals, interactive UI, and a smooth user experience—perfect for food lovers and vendors alike.
+            </p>
+          </div>
+        </div>
+        <h3 class="text-xl font-semibold hover:text-[#59B2F4] mt-2">FoodFun</h3>
+      </a>
+      <a
+        href="https://github.com/yourusername/project4"
+        target="_blank"
+        class="inline-block mt-2 px-4 py-2 bg-[#59B2F4] text-[#191f36] rounded hover:bg-[#1f2745] hover:text-white transition"
+      >View</a>
+    </div>
+    <!-- Project 5 -->
+    <div class="bg-[#262b40] p-4 rounded-lg shadow-lg group relative transition-transform duration-300 transform hover:scale-105 hover:border-2 hover:border-[#59B2F4] hover:shadow-[0_0_20px_#59B2F4]">
+      <a href="https://github.com/yourusername/project5" target="_blank" class="block relative">
+        <div class="relative mb-4 overflow-hidden rounded">
+          <img src="./image/log.jpg" alt="Project 5" class="w-full h-[490px] object-cover" />
+          <div class="absolute left-0 bottom-0 w-full bg-[#59B2F4]/80 py-4 px-2 opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 rounded-b">
+            <p class="text-white text-center text-base">
+              A responsive and user-friendly form built with HTML and styled using Tailwind CSS. Includes real-time validation to ensure correct user input and enhance user experience.
+            </p>
+          </div>
+        </div>
+        <h3 class="text-xl font-semibold hover:text-[#59B2F4] mt-2">A Form Validation</h3>
+      </a>
+      <a
+        href="https://team-strawberry.vercel.app/"
+        target="_blank"
+        class="inline-block mt-2 px-4 py-2 bg-[#59B2F4] text-[#191f36] rounded hover:bg-[#1f2745] hover:text-white transition"
+      >View</a>
+    </div>
+    <!-- Project 6 -->
+    <div class="bg-[#262b40] p-4 rounded-lg shadow-lg group relative transition-transform duration-300 transform hover:scale-105 hover:border-2 hover:border-[#59B2F4] hover:shadow-[0_0_20px_#59B2F4]">
+      <a href="https://github.com/yourusername/project6" target="_blank" class="block relative">
+        <div class="relative mb-4 overflow-hidden rounded">
+          <img src="./image/adv.jpg" alt="Project 6" class="w-full h-[490px] object-cover" />
+          <div class="absolute left-0 bottom-0 w-full bg-[#59B2F4]/80 py-4 px-2 opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 rounded-b">
+            <p class="text-white text-center text-base">
+            A full-stack advertisement website built with React and Tailwind CSS. Features dynamic ad listings, responsive design, and multilingual support using react-i18next for a seamless user experience across languages.
+            </p>
+          </div>
+        </div>
+        <h3 class="text-xl font-semibold hover:text-[#59B2F4] mt-2">An Advertisement Website</h3>
+      </a>
+      <a
+        href="https://deeconnect.netlify.app/"
+        target="_blank"
+        class="inline-block mt-2 px-4 py-2 bg-[#59B2F4] text-[#191f36] rounded hover:bg-[#1f2745] hover:text-white transition"
+      >View</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- -----------CERTIFICATION SECTION----------- -->
+ <section id="certificates" class="bg-[#0a192f] w-full py-20 px-10">
+  <h2 class="text-3xl font-bold text-center mb-10 text-blue-700">Certificates</h2>
+  
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    
+    <!-- Certificate Card 1 -->
+    <div class="bg-gray-50 border rounded-lg shadow hover:shadow-lg transition duration-300">
+      <img src="./image/cert1.png" alt="Web Development Certificate" class="w-full h-80 object-cover rounded-t-lg">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-black">Project Management Professional</h3>
+        <p class="text-sm text-gray-600">Issued By: Ghana Civil Aviation Authority,GCAA</p>
+        <p class="text-sm text-gray-500 mb-3">Issued On: September 2024</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- Certificate Card 2 -->
+    <div class="bg-gray-50 border rounded-lg shadow hover:shadow-lg transition duration-300">
+      <img src="./image/cert2.png" alt="Digital Marketing Certificate" class="w-full h-80 object-cover rounded-t-lg">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-black">Entrepreneurship and Leadership</h3>
+        <p class="text-sm text-gray-600">Issued By: LNE Management Consult And GCAA</p>
+        <p class="text-sm text-gray-500 mb-3">Issued On: september 2024</p>
+        
+      </div>
+    </div>
+     <div class="bg-gray-50 border rounded-lg shadow hover:shadow-lg transition duration-300">
+      <img src="./image/cert3.png" alt="Digital Marketing Certificate" class="w-full h-80 object-cover rounded-t-lg">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-black">Web Development Fundamental</h3>
+        <p class="text-sm text-gray-600">Issued By: IBM SkillsBuild</p>
+        <p class="text-sm text-gray-500 mb-3">Issued On: April 2025</p>
+      </div>
+    </div>
+
+    
+    
+  </div>
+</section>
+
+
+
+
+
+
+    <!-- TESTIMONIALS SECTION -->
+   <section id="testimonials" class="py-20 px-10 bg-[#262b40]">
+  <h2 class="text-4xl font-bold mb-6 text-center">
+    What People <span class="text-[#59B2F4]">Say</span>
+  </h2>
+  <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- Testimonial 1 -->
+    <div class="bg-[#191f36] p-6 rounded-lg shadow-lg text-center">
+      <img src="./image/thefinisher.png" alt="Michael Hammond" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover" />
+      <p class="italic mb-4">"Sandra is a very dedicated and talented developer. Her projects always exceed expectations."</p>
+      <div class="flex justify-center mb-2">
+        <i class="fa-solid fa-star text-yellow-400"></i>
+        <i class="fa-solid fa-star text-yellow-400"></i>
+        <i class="fa-solid fa-star text-yellow-400"></i>
+        <i class="fa-solid fa-star text-yellow-400"></i>
+        <i class="fa-solid fa-star text-yellow-400"></i>
+      </div>
+      <h4 class="font-bold">Michael Hammond</h4>
+    </div>
+    <!-- Testimonial 2 -->
+    <div class="bg-[#191f36] p-6 rounded-lg shadow-lg text-center">
+      <img src="./image//rachael.png" alt="Rachael Kurachie" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover" />
+      <p class="italic mb-4">"Working with Sandra was a great experience. She delivered everything on time and with top quality."</p>
+      <div class="flex justify-center mb-2">
+        <i class="fa-solid fa-star text-yellow-400"></i>
+        <i class="fa-solid fa-star text-yellow-400"></i>
+        <i class="fa-solid fa-star text-yellow-400"></i>
+        <i class="fa-solid fa-star text-yellow-400"></i>
+        <i class="fa-solid fa-star text-yellow-400"></i>
+      </div>
+      <h4 class="font-bold">Rachael Kurachie</h4>
+    </div>
+    <!-- Testimonial 3 -->
+    <div class="bg-[#191f36] p-6 rounded-lg shadow-lg text-center">
+      <img src="./image/esther.jpg" alt="Esther Manorkie" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover" />
+      <p class="italic mb-4">"Sandra's attention to detail and creative approach made our website stand out. She communicates clearly and delivers on time—highly recommended!"
+</p>
+      <div class="flex justify-center mb-2">
+        <i class="fa-solid fa-star text-yellow-400"></i>
+        <i class="fa-solid fa-star text-yellow-400"></i>
+        <i class="fa-solid fa-star text-yellow-400"></i>
+        <i class="fa-solid fa-star text-yellow-400"></i>
+        <i class="fa-solid fa-star text-yellow-400"></i>
+      </div>
+      <h4 class="font-bold">Esther Manorkie</h4>
+    </div>
+    <!-- Testimonial 4 -->
+    <div class="bg-[#191f36] p-6 rounded-lg shadow-lg text-center">
+      <img src="./image/kasia.png" alt="Kezia Ampomah" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover" />
+      <p class="italic mb-4">"Working with Sandra was effortless. She understood our needs, provided valuable suggestions, and the final product exceeded our expectations."
+</p>
+      <div class="flex justify-center mb-2">
+        <i class="fa-solid fa-star text-yellow-400"></i>
+        <i class="fa-solid fa-star text-yellow-400"></i>
+        <i class="fa-solid fa-star text-yellow-400"></i>
+        <i class="fa-solid fa-star text-yellow-400"></i>
+        <i class="fa-solid fa-star text-yellow-400"></i>
+      </div>
+      <h4 class="font-bold">Kezia Ampomah</h4>
+    </div>
+  </div>
+</section>
+
     <!-- CONTACT SECTION -->
     <section id="contact" class="py-20 px-6 bg-[#0a192f]">
       <h2 class="text-4xl font-bold text-center mb-10">
@@ -425,23 +566,19 @@
             get in touch with your ideas. Happy to discuss how I can contribute.
             You can reach out anytime.
           </p>
-          <!-- Connect with me-->
           <div>
             <div class="flex gap-5 items-center mb-4 text-17px">
               <i class="fa-solid fa-envelope text-[#fff] text-4xl"></i>
               <h1>sandraallotey70@gmail.com</h1>
             </div>
-
             <div class="flex gap-5 items-center mb-4 text-17px">
               <i class="fa-solid fa-tty text-[#fff] text-3xl"></i>
               <h1>0545725331</h1>
             </div>
-
             <div class="flex gap-5 items-center mb-4 text-17px">
               <i class="fa-brands fa-linkedin text-[#fff] text-3xl"></i>
               <h1>Sandra Allotey</h1>
             </div>
-
             <div class="flex gap-5 items-center text-17px">
               <i class="fa-solid fa-location-dot text-[#fff] text-3xl"></i>
               <h1>Accra,Ghana</h1>
@@ -457,36 +594,29 @@
             placeholder="Full Name"
             class="w-full px-4 py-3 rounded bg-[#191f36] text-white focus:outline-none"
           />
-
           <input
             type="email"
             placeholder="Email Address"
             class="w-full px-4 py-3 rounded bg-[#191f36] text-white focus:outline-none"
           />
-
           <input
             type="text"
             placeholder="Mobile Number"
             class="w-full px-4 py-3 rounded bg-[#191f36] text-white focus:outline-none"
           />
-
           <input
             type="text"
             placeholder="Email Subject"
             class="w-full px-4 py-3 rounded bg-[#191f36] text-white focus:outline-none"
           />
-
-          <!-- textarea -->
           <textarea
             placeholder="Your Message"
             rows="6"
             class="md:col-span-2 w-full px-4 py-3 rounded bg-[#191f36] text-white focus:outline-none"
           ></textarea>
-
-          <!-- lastButton -->
           <div class="md:col-span-2 text-center">
             <a
-              class="bg-[#59B2F4] text-black px-8 py-3 rounded-full font-semibold shadow-md transition-all duration-300 transition hover:scale-105 hover:shadow-[0_0_20px-#59B2F4] focus:outline-none  cursor-pointer hover:bg-[#59B2F4]"
+              class="bg-[#59B2F4] text-black px-8 py-3 rounded-full font-semibold shadow-md transition-all duration-300 transition hover:scale-105 hover:shadow-[0_0_20px-#59B2F4] focus:outline-none cursor-pointer hover:bg-[#59B2F4]"
             >
               Send Message
             </a>
@@ -494,6 +624,7 @@
         </form>
       </div>
     </section>
+
     <!-- FOOTER -->
     <footer class="bg-[#262b40] text-center py-6 mt-10">
       <p class="text-sm">&copy; 2025 by Sandra Allotey | All Rights Reserved</p>
@@ -506,21 +637,32 @@
         </a>
       </div>
     </footer>
+
     <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
       new Typed("#typed", {
-        strings: ["Frontend Developer.", " UI|UX Designer.", "Web Designer"],
+        strings: ["Frontend Developer.", "Web Developer."],
         typeSpeed: 60,
         backSpeed: 30,
         loop: true,
       });
 
-      const menuIcon = document.querySelector(".fa-bars");
-      const navMenu = document.querySelector("nav");
-      menuIcon.addEventListener("click", () => {
-        navMenu.classList.toggle("hidden");
+      // Hamburger menu logic
+      const openBtn = document.getElementById("open");
+      const closeBtn = document.getElementById("close");
+      const resNav = document.getElementById("res-nav");
+
+      openBtn.addEventListener("click", () => {
+        resNav.classList.remove("translate-x-full");
+        resNav.classList.add("translate-x-0");
       });
+
+      closeBtn.addEventListener("click", () => {
+        resNav.classList.remove("translate-x-0");
+        resNav.classList.add("translate-x-full");
+      });
+      
     </script>
   </body>
 </html>
